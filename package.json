@@ -1,22 +1,17 @@
 {
-    "name": "is-valid-var-name",
-    "version": "1.0.2",
-    "description": "Determines whether a string is a valid ecma javascript variable name",
+    "name": "is-valid-es-identifier",
+    "version": "2.0.0",
+    "description": "Determines whether a string is a valid ecma javascript identifier name",
     "main": "index.js",
-    "dependencies": {
-        "unicode-categories": "^0.9.1"
-    },
+    "type": "module",
     "bugs": {
-        "url": "https://github.com/SteveWestbrook/is-valid-var-name/issues"
+        "url": "https://github.com/martypdx/is-valid-es-identifier/issues"
     },
     "devDependencies": {
         "eslint": "^8.57.0",
-        "mocha": "^3.2.0",
-        "plato": "^1.7.0",
         "vitest": "^1.3.1"
     },
     "files": [
-        "lib/",
         "index.js",
         "LICENSE",
         "README.md"
@@ -24,9 +19,10 @@
     "homepage": "https://github.com/SteveWestbrook/is-valid-var-name",
     "repository": {
         "type": "git",
-        "url": "https://github.com/SteveWestbrook/is-valid-var-name.git"
+        "url": "https://github.com/martypdx/is-valid-es-identifier.git"
     },
     "scripts": {
+        "lint": "eslint .",
         "test": "vitest"
     },
     "keywords": [

@@ -9,7 +9,6 @@
 import { assert, test } from 'vitest';
 import { isValidESIdentifier } from './index.js';
 
-
 var testGroup = (validator, name) => {
 
     test(`${name} should recognize a basic variable`, () => {
@@ -76,7 +75,6 @@ var testGroup = (validator, name) => {
 
     test(`${name} should fail with reserved words`, () => {
         // keywords
-        console.log('****', validator('break'))
         assert.ok(!validator('break'));
         assert.ok(!validator('do'));
         assert.ok(!validator('in'));
@@ -157,24 +155,24 @@ test('should not support some characters in ES6', () => {
 });
 
 var content = '$';
-for(var i = 0; i < 10; i++) {
+for(let i = 0; i < 10; i++) {
     content += Math.floor(Math.random() * 9).toString();
 }
 
 test('should perform ok', () => {
-    for(var i = 0; i < 1000000; i++) {
+    for(let i = 0; i < 1000000; i++) {
         assert.ok(isValidESIdentifier(content));
     }
 });
 
 var shortContent = '$';
-for(var i = 0; i < 4; i++) {
+for(let i = 0; i < 4; i++) {
     shortContent += String.fromCharCode(
         0x41 + Math.floor(Math.random() * 9).toString());
 }
 
 test('should perform ok with short variables', () => {
-    for(var i = 0; i < 1000000; i++) {
+    for(let i = 0; i < 1000000; i++) {
         assert.ok(isValidESIdentifier(shortContent));
     }
 });

@@ -1,60 +1,35 @@
 # is-valid-es-identifier
 
-Single-purpose [node](https://nodejs.org) module that determines whether a string is a valid javascript variable.
+Single-purpose [node](https://nodejs.org) module that determines whether a string is a valid javascript identifier.
 
 This implementation has been optimized for performance.
 
-The primary function is ES6 compatible; ES5 variable names can also be validated.
+Supports ES6/ES2015 or newer. ES5 or non-strict mode not supported
 
 ```
-const isVarName = require('is-valid-var-name');
+import { isValidESIdentifier } from './index.js';
 
 // true
-var isValid = isVarName('x');
+let isValid = isValidESIdentifier('x');
 
 // false
-isValid = isVarName(' not a var ');
+isValid = isValidESIdentifier(' not a var ');
 
 // win the respect of your colleagues with this highly maintainable code
-isValid = isVarName('ᚢᚫᚱ');
+isValid = isValidESIdentifier('ᚢᚫᚱ');
 ```
 
 **Installation**
 
 ```
-$ npm install is-valid-var-name
+$ npm install is-valid-es-identifier
 ```
-
-**Options**
-
-By default, the validation function assumes ES2015 strict mode.  These values can be overridden.
-
-To provide ES5 evaluation:
-
-```
-const isVarName = require('is-valid-var-name').es5;
-
-// valid under ES5
-isValid = isVarName('await');
-```
-
-To turn off strict mode evaluation:
-```
-// Turn off strict mode evaluation
-isVarName.strict = false;
-
-// valid when strict mode is off
-isValid = isVarName('arguments');
-```
-
-**What about other identifiers?**
-
-This module validates variable names, but is not intended to validate more complex identifiers such as multi-part values (a.b.c) or string-accessible properties (a["null"]).
 
 ## Special Thanks/Acknowledgements
 This implementation draws heavily on the excellent research of Matthias Bynens, who did the legwork in explaining valid variable names for [ES5](https://mathiasbynens.be/notes/javascript-identifiers) and [ES6](https://mathiasbynens.be/notes/javascript-identifiers-es6).
 
 ## License
 Copyright (c) 2017 Steve Westbrook
+Copyright (c) 2024 Marty Nelson
 
 [MIT](LICENSE)
