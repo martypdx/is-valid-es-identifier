@@ -1,4 +1,4 @@
-# is-valid-var-name
+# is-valid-es-identifier
 
 Single-purpose [node](https://nodejs.org) module that determines whether a string is a valid javascript variable.
 
