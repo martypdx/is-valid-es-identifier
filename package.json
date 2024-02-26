@@ -1,7 +1,7 @@
 {
     "name": "is-valid-es-identifier",
     "version": "2.0.0",
-    "description": "Determines whether a string is a valid ecma javascript identifier name",
+    "description": "Determines whether a string is a valid ecma javascript identifier",
     "main": "index.js",
     "type": "module",
     "bugs": {
@@ -16,7 +16,7 @@
         "LICENSE",
         "README.md"
     ],
-    "homepage": "https://github.com/SteveWestbrook/is-valid-var-name",
+    "homepage": "https://github.com/martypdx/is-valid-es-identifier",
     "repository": {
         "type": "git",
         "url": "https://github.com/martypdx/is-valid-es-identifier.git"
