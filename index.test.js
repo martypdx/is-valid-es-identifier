@@ -1,5 +1,5 @@
 /**
- * Removed ES5 related tests
+ * Removed ES5 related tests and renamed ES2015 to ES6
  * 
  * test
  * Copyright(c) 2017 Steve Westbrook

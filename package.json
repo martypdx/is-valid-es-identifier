@@ -1,7 +1,7 @@
 {
     "name": "is-valid-es-identifier",
     "version": "2.0.0",
-    "description": "Determines whether a string is a valid ecma javascript identifier",
+    "description": "Determines whether a name is a valid modern javascript identifier",
     "main": "index.js",
     "type": "module",
     "bugs": {

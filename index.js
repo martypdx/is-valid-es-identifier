@@ -3,7 +3,9 @@
  * Copyright(c) 2017 Steve Westbrook | MIT Licensed
  * 
  * I have removed ES5 support and changed the keyword/restricted
- * check to a set lookup rather than procedural if
+ * check to a set lookup rather than procedural if.
+ * 
+ * The Regex is direct from original fork
  */
 
 export function isValidESIdentifier(name) {

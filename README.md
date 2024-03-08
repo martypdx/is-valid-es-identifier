@@ -1,10 +1,19 @@
 # is-valid-es-identifier
 
-Single-purpose [node](https://nodejs.org) module that determines whether a string is a valid javascript identifier.
+A module that determines whether a string name is a valid modern javascript identifier.
 
-This implementation has been optimized for performance.
+**Supports ES6/ES2015 or newer only.** 
 
-Supports ES6/ES2015 or newer. ES5 or non-strict mode not supported
+ES5 and non-strict mode are not supported. If you need support for older JavaScript, you
+should use the [original fork](https://github.com/SteveWestbrook/is-valid-var-name).
+
+**Installation**
+
+```
+$ npm install is-valid-es-identifier
+```
+
+**Use**
 
 ```
 import { isValidESIdentifier } from './index.js';
@@ -13,20 +22,9 @@ import { isValidESIdentifier } from './index.js';
 let isValid = isValidESIdentifier('x');
 
 // false
-isValid = isValidESIdentifier(' not a var ');
-
-// win the respect of your colleagues with this highly maintainable code
-isValid = isValidESIdentifier('ᚢᚫᚱ');
-```
-
-**Installation**
+isValid = isValidESIdentifier('9x');
 
 ```
-$ npm install is-valid-es-identifier
-```
-
-## Special Thanks/Acknowledgements
-This implementation draws heavily on the excellent research of Matthias Bynens, who did the legwork in explaining valid variable names for [ES5](https://mathiasbynens.be/notes/javascript-identifiers) and [ES6](https://mathiasbynens.be/notes/javascript-identifiers-es6).
 
 ## License
 Copyright (c) 2017 Steve Westbrook
